@@ -30,7 +30,37 @@
 6 Run the application
  
       python manage.py runserver 
+      
+7 Endpoint 
 
+       api/resume/
+
+
+ Payload
+
+       {
+    "name": "JOHN",
+    "experience": 5,
+    "tech_skills": "Python, Django",
+    "workplace_location": {
+        "city": "HYD",
+        "country": "TS"
+    },
+    "work_experience": [
+        {
+            "project_name": "Project 1",
+            "others": {
+                "cetificates": "Aws"
+            }
+        },
+        {
+            "project_name": "Project 2",
+            "others": {
+                "cetificates": "AWS,GCP"
+            }
+        }
+    ]
+}
 
 
 

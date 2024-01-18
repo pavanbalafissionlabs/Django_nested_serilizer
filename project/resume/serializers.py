@@ -41,12 +41,12 @@ class ResumeSerializer(serializers.ModelSerializer):
             project = Projects.objects.create(project_name=project_data['project_name'], others=project_data.get('others', {}))
             projects.append(project)
 
-        # Create the resume with the associated location
+        
         resume = Resume.objects.create(workplace_location=location, **validated_data)
 
-        # Associate the created projects with the resume
+       
         resume.work_experience.set(projects)
-        # resume.work_experience = projects
+       
 
         print(" resume",resume)
 
